@@ -4,6 +4,11 @@ pipeline{
         maven 'M2_HOME'
     }
     stages{
+        stage('sonar-scan'){
+            steps{
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=kleric1993_reW16-geo-app'
+            }
+        }
         stage("maven"){
             steps{
             sh 'mvn clean validate compile install test package'
