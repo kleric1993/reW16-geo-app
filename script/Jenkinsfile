@@ -6,7 +6,9 @@ pipeline{
     stages{
         stage('sonar-scan'){
             steps{
+                withSonarQubeEnv('sonarQube'){
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=kleric1993_reW16-geo-app'
+                }
             }
         }
         stage("maven"){
