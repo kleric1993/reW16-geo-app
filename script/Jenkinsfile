@@ -20,7 +20,7 @@ pipeline{
              steps{
                 sh 'curl -uadmin:AP4tbU8yG28DhL74UFcmddLM23r -T \
                 target/bio*.jar \
-                 "http://52.86.130.114:8081/artifactory/geolocation/geo/bio_${BUILD_ID}.jar"'
+                 "http://3.84.237.213:8081/artifactory/geolocation/geo/bio_${BUILD_ID}.jar"'
              }
         }
         stage('docker login'){
