@@ -18,7 +18,7 @@ pipeline{
         }
         stage('upload artifact'){
              steps{
-                sh 'curl -uadmin:AP4tbU8yG28DhL74UFcmddLM23r -T \
+                sh 'curl -uadmin:admin1234 -T \
                 target/bio*.jar \
                  "http://3.84.237.213:8081/artifactory/geolocation/geo/bio_${BUILD_ID}.jar"'
              }
