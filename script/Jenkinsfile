@@ -16,7 +16,7 @@ pipeline{
             sh 'mvn clean validate compile install test package'
             }
         }
-        stage('upload artifact1'){
+        stage('upload artifact2'){
              steps{
                 sh 'curl -uadmin:admin1234 -T \
                 target/bio*.jar \
